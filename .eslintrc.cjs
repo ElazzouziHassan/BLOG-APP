@@ -4,8 +4,9 @@ module.exports = {
   extends: [
     'eslint:recommended',
     'plugin:react/recommended',
-    // 'plugin:react/jsx-runtime',
+    'plugin:react/jsx-runtime',
     'plugin:react-hooks/recommended',
+    'eslint-disable-next-line no-unused-vars'
   ],
   ignorePatterns: ['dist', '.eslintrc.cjs'],
   parserOptions: { ecmaVersion: 'latest', sourceType: 'module' },
