@@ -1,8 +1,14 @@
 import React from "react"
-import "./style.scss"
 import { Outlet, RouterProvider, createBrowserRouter } from "react-router-dom"
 import NavBar from "./components/nav-bar/NavBar"
 import Footer from "./components/footer/Footer"
+import Register from "./pages/auth/Register"
+import Login from "./pages/auth/Login"
+import Home from "./pages/home/Home"
+import Write from "./pages/others/Writre"
+import Single from "./pages/others/Single"
+import "./style.scss"
+
 
 const Layout = () => {
   return (
@@ -19,8 +25,18 @@ const router = createBrowserRouter([
     path: "/",
     element:<Layout/>,
     children: [
-      { path:"", element: <></> },
-    ]
+      { path:"/", element: <Home /> },
+      { path:"/post/:id", element: <Single /> },
+      { path:"/write", element: <Write /> },
+    ],
+  },
+  {
+    path: "/register",
+    element: <Register />
+  },
+  {
+    path: "/login",
+    element: <Login />
   }
 ])
 
