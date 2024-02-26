@@ -1,13 +1,13 @@
 import React from "react"
 import { Outlet, RouterProvider, createBrowserRouter } from "react-router-dom"
-import NavBar from "components/nav-bar/NavBar"
-import Footer from "components/footer/Footer"
-import Register from "pages/auth/Register"
-import Login from "pages/auth/Login"
-import Home from "pages/home/Home"
-import Write from "pages/others/Writre"
-import Single from "pages/others/Single"
-import "style.scss"
+import NavBar from "./components/nav-bar/NavBar"
+import Footer from "./components/footer/Footer"
+import Register from "./pages/auth/Register"
+import Login from "./pages/auth/Login"
+import Home from "./pages/home/Home"
+import Write from "./pages/others/Writre"
+import Single from "./pages/others/Single"
+import "./style.scss"
 
 const Layout = () => {
   return (
