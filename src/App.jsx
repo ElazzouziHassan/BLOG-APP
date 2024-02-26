@@ -1,6 +1,15 @@
 import React from "react"
 import "./style.scss"
 
+
+const Layout = () => {
+  return (
+    <>
+      <h1>app layout</h1>
+    </>
+  )
+}
+
 function App() {
 
   return (
