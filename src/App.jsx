@@ -1,12 +1,15 @@
 import React from "react"
 import "./style.scss"
-import { RouterProvider, createBrowserRouter } from "react-router-dom"
-
+import { Outlet, RouterProvider, createBrowserRouter } from "react-router-dom"
+import NavBar from "./components/nav-bar/NavBar"
+import Footer from "./components/footer/Footer"
 
 const Layout = () => {
   return (
     <>
-      <h1>app layout</h1>
+      <NavBar/>
+      <Outlet/>
+      <Footer/>
     </>
   )
 }
