@@ -1,5 +1,6 @@
 import React from "react"
 import "./style.scss"
+import { RouterProvider, createBrowserRouter } from "react-router-dom"
 
 
 const Layout = () => {
@@ -10,12 +11,24 @@ const Layout = () => {
   )
 }
 
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element:<Layout/>,
+    children: [
+      { path:"", element: <></> },
+    ]
+  }
+])
+
 function App() {
 
   return (
-    <>
-      <h1>MY PERSONAL BLOG</h1>
-    </>
+    <div className="app">
+      <div className="container">
+        <RouterProvider router={router}/>
+      </div>
+    </div>
   )
 }
 
